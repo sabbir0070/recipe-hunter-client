@@ -1,22 +1,37 @@
 import React, { useContext, useState } from 'react';
 import { Bars3Icon, UserCircleIcon, XMarkIcon } from '@heroicons/react/24/solid';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../../Providers/AuthProviders';
 const Navbar = () => {
+const chefData = useLoaderData();
+ console.log(chefData)
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { user } = useContext(AuthContext);
-  console.log(user.photoURL)
+const [error, setError] = useState('');
+  const { user,logOut } = useContext(AuthContext);
+  console.log(user?.photoURL)
+// logout
+const handleLogout = () =>{
+logOut()
+.then(()=>{})
+.catch(error=>{
+setError(error.message)
+})
+}
   return (
-    <div className='px-1 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl '>
-      <div className='flex justify-between items-center p-10 bg-gray-200'>
-        <Link className='text-3xl font-bold inline-flex items-center'>Food & Recipe</Link>
+  <div className='bg-gray-200'>
+  <div className='px-1 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl '>
+      <div className='flex justify-between items-center p-10 bg-gray-300'>
+        <h2 className='text-3xl font-bold inline-flex items-center'>Food & Recipe</h2>
         <ul className='items-center hidden space-x-8 lg:flex text-gray-600 text-lg'>
           <NavLink to='/' className={({ isActive }) => (isActive ? 'text-blue-500' : 'default')}>Home</NavLink>
           <NavLink to='/blog' className={({ isActive }) => (isActive ? 'text-blue-500' : 'default')}>blog</NavLink>
           <NavLink to='/login' className={({ isActive }) => (isActive ? 'text-blue-500' : 'default')}> Login </NavLink>
           <NavLink to='/register' className={({ isActive }) => (isActive ? 'text-blue-500' : 'default')}>Register</NavLink>
           {user ?
-            <> <Link aria-label='user' title={user.displayName}> <UserCircleIcon className='w-8 h-8 text-red-500'></UserCircleIcon>  </Link> <Link><button> Logout</button></Link> </> :
+            <> <div aria-label='user' title={user?.displayName}> <div className='w-10 h-10  rounded-full'><img src={user?.photoURL}className=' w-10 h-10 rounded-full' alt="" /></div>  </div>
+
+ <button onClick={handleLogout} className='bg-indigo-500 text-white font-semibold rounded px-3 py-1 px-5'>Logout</button> </> :
             <Link to="/login"><button className=''>Login</button></Link>
           }
         </ul>
@@ -32,7 +47,7 @@ const Navbar = () => {
               <div className='p-5 bg-gray-200 mb-10  border rounded shadow-sm'>
                 <div className='flex items-center justify-between mb-4'>
                   <div>
-                    <Link to="" className='text-3xl font-bold inline-flex items-center'>Food & recipe</Link>
+                    <Link className='text-3xl font-bold inline-flex items-center'>Food & recipe</Link>
                   </div>
                   <div>
                     <button
@@ -90,8 +105,10 @@ const Navbar = () => {
                     </li>
                     <li>
 
-                       {user ?
-            <> <Link aria-label='user' title={user.displayName}> <UserCircleIcon className='w-8 h-8 text-red-500'></UserCircleIcon>  </Link> <Link><button> Logout</button></Link> </> :
+                      {user ?
+            <> <div  aria-label='user' title={user?.displayName}> <div className='w-10 h-10 rounded-full'><img src={user?.photoURL}className=' w-8 h-8 rounded-full' alt="" /></div>  </div>
+
+ <button onClick={handleLogout} className='bg-indigo-500 text-white font-semibold rounded px-3 py-1 px-5'>Logout</button> </> :
             <Link to="/login"><button className=''>Login</button></Link>
           }
                       
@@ -106,6 +123,7 @@ const Navbar = () => {
 
       </div>
     </div>
+</div>
   );
 };
 

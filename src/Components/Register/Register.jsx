@@ -80,10 +80,7 @@ setError(error.message)
           <label className="label">
             <span className="label-text text-lg">Password</span>
           </label>
-          <input type="password" name='password' placeholder="Your Password" className="input input-bordered" required />
-          <label className="label">
-            <a href="#" className="label-text-alt link link-hover text-lg">Forgot password?</a>
-          </label>
+          <input type="password" name='password' placeholder="Your Password" className="input input-bordered" required / >
         </div>
         <div className="form-control mt-6">
           <button className="btn btn-primary">Login</button>

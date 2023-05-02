@@ -1,14 +1,15 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import banner from '../../assets/image/banner.jpg'
-import { AuthContext } from '../../Providers/AuthProviders';
+import ChefAllData from '../ChefAllData/ChefAllData';
+import { useLoaderData } from 'react-router-dom';
 
 const Home = () => {
-const {user} = useContext(AuthContext);
-
-
+const data = useLoaderData()
+console.log(data,55)
   return (
     <div>
-      <div className='grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-2 bg-gray-200 justify-around px-10 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl'>
+       <div className='bg-gray-200'>
+      <div className='grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-2 sm:gap-y-16 bg-gray-200 justify-between px-10 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl'>
             <div className=' '>
              <p className='text-4xl font-bold text-gray-800 leading-tight '>A Chef In Every<br />   <span className='text-indigo-500'> Tasty Meal Box.</span> </p>
             <p className='text-gray-700 text-2xl mt-3'> Get pre-portioned ingredients <br /> for Gusto Meal Kits  <br /> best recipes direct to your door </p>
@@ -20,6 +21,10 @@ const {user} = useContext(AuthContext);
             <div>
             </div>
         </div>
+    </div>
+<div>
+<ChefAllData></ChefAllData>
+</div>
     </div>
   );
 };
