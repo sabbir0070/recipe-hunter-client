@@ -1,15 +1,11 @@
 import React, { useContext, useState } from 'react';
-import { Bars3Icon, UserCircleIcon, XMarkIcon } from '@heroicons/react/24/solid';
-import { Link, NavLink, useLoaderData } from 'react-router-dom';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
+import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../../Providers/AuthProviders';
 const Navbar = () => {
-const chefData = useLoaderData();
- console.log(chefData)
-
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 const [error, setError] = useState('');
   const { user,logOut } = useContext(AuthContext);
-  console.log(user?.photoURL)
 // logout
 const handleLogout = () =>{
 logOut()
@@ -19,7 +15,7 @@ setError(error.message)
 })
 }
   return (
-  <div className='bg-gray-200'>
+  <div className=''>
   <div className='px-1 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl '>
       <div className='flex justify-between items-center p-10 bg-gray-300'>
         <h2 className='text-3xl font-bold inline-flex items-center'>Food & Recipe</h2>
