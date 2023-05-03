@@ -8,9 +8,6 @@ const Footer = () => {
     <div>
     <footer className='divide-y  text-gray-800'>
       <div className='px-10 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl'>
-<div>
-<FontAwesomeIcon icon={faCediSign}/>
-</div>
 
 </div>
       <div className='py-6 text-sm text-center text-gray-400'>

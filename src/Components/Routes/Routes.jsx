@@ -9,6 +9,7 @@ import Home from "../Home/Home";
 import ChefCard from "../pages/ChefCard/ChefCard";
 import ChefAllData from "../ChefAllData/ChefAllData";
 import ChefRecipesLayout from "../../Layouts/ChefRecipesLayout";
+import PrivateRoute from "../../PrivateRoute/PrivateRoute";
 
 
 
@@ -55,7 +56,7 @@ const router = createBrowserRouter([
     children: [
      {
         path: 'chefrecipes/:id',
-        element: <ChefRecipes></ChefRecipes>,
+        element: <PrivateRoute><ChefRecipes></ChefRecipes></PrivateRoute>,
         loader: ({params}) => fetch(`https://chef-receipe-hunter-server-sabbir0070.vercel.app/chefdatas/${params.id}`)
       }
     ]

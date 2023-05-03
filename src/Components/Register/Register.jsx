@@ -83,7 +83,7 @@ setError(error.message)
           <input type="password" name='password' placeholder="Your Password" className="input input-bordered" required / >
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Login</button>
+          <button className="btn btn-primary">Register</button>
         </div>
 <p className='text-blue-600 text-lg font-semibold text-center'><small><Link to='/login'>Already Have An Account? Please Login</Link></small></p>
 <p className='text-red-600 text-lg font-semibold text-center'><small>{error}</small></p>

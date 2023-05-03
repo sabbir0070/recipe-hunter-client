@@ -17,21 +17,25 @@ const Navbar = () => {
   return (
     <div className=''>
       <div className='px-1  py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl '>
-        <div className='flex justify-between items-center p-10 bg-red-200'>
+        <div className='flex justify-between items-center p-10 bg-base-300'>
           <h2 className='text-3xl font-bold inline-flex items-center hover:text-blue-600'>Food & Recipe</h2>
           <ul className='items-center hidden space-x-8 lg:flex text-gray-600 text-lg'>
-            <NavLink to='/' className={({ isActive }) => (isActive ? 'text-blue-500' : 'default')}>Home</NavLink>
-            <NavLink to='/blog' className={({ isActive }) => (isActive ? 'text-blue-500' : 'default')}>blog</NavLink>
-            <NavLink to='/login' className={({ isActive }) => (isActive ? 'text-blue-500' : 'default')}> Login </NavLink>
-            <NavLink to='/register' className={({ isActive }) => (isActive ? 'text-blue-500' : 'default')}>Register</NavLink>
+            <NavLink to='/' className={({ isActive }) => (isActive ? 'text-blue-500' : 'text-gray-600 font-semibold')} >Home</NavLink>
+            <NavLink to='/blog' className={({ isActive }) => (isActive ? 'text-blue-500' : 'text-gray-600 font-semibold')}>blog</NavLink>
+            {/* <NavLink to='/login' className={({ isActive }) => (isActive ? 'text-blue-500' : 'default')}> Login </NavLink> */}
+            <NavLink to='/register' className={({ isActive }) => (isActive ? 'text-blue-500' : 'text-gray-600 font-semibold')}>Register</NavLink>
             {user ?
               <> <div aria-label='user' title={user?.displayName}>
                 <div className='w-10 h-10  rounded-full'><img src={user?.photoURL} className=' w-10 h-10 rounded-full' alt="" />
                 </div>
               </div>
 
-                <button onClick={handleLogout} className='bg-indigo-500 text-white font-semibold rounded px-3 py-1 px-5'>Logout</button> </> :
-              <Link to="/login"><button className=''>Login</button></Link>
+                <button onClick={handleLogout} className='bg-indigo-500 text-white font-semiboldrounded px-3 py-1 px-5'>Logout</button> </> :
+              <Link to="/login">
+                <button className='bg-indigo-500 text-white  font-semibold rounded px-3 py-1 px-5'>
+                  Login
+                </button>
+              </Link>
             }
           </ul>
           <div className='lg:hidden'>
@@ -81,7 +85,7 @@ const Navbar = () => {
                           Blog
                         </Link>
                       </li>
-                      <li>
+                      {/* <li>
                         <Link
                           to='/login'
                           aria-label='login'
@@ -90,7 +94,7 @@ const Navbar = () => {
                         >
                           Login
                         </Link>
-                      </li>
+                      </li> */}
 
                       <li>
                         <Link
@@ -107,8 +111,8 @@ const Navbar = () => {
                         {user ?
                           <> <div aria-label='user' title={user?.displayName}> <div className='w-10 h-10 rounded-full'><img src={user?.photoURL} className=' w-8 h-8 rounded-full' alt="" /></div>  </div>
 
-                            <button onClick={handleLogout} className='bg-indigo-500 text-white font-semibold rounded px-3 py-1 px-5'>Logout</button> </> :
-                          <Link to="/login"><button className=''>Login</button></Link>
+                            <button onClick={handleLogout} className='bg-indigo-500 text-white  font-semibold rounded px-3 py-1 px-5'>Logout</button> </> :
+                          <Link to="/login"><button className='bg-indigo-500 text-white  font-semibold rounded px-3 py-1 px-5'>Login</button></Link>
                         }
 
                       </li>

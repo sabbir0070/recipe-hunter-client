@@ -59,6 +59,7 @@ const googleSignIn = () => {
 
 const authInfo = {
 user,
+loading,
 createUser,
 signInUser,
 googleSignIn,

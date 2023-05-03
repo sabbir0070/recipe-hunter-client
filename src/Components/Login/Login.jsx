@@ -1,13 +1,15 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProviders';
 
 const Login = () => {
 const [error, setError] = useState('');
 const [success, setSuccess] = useState(''); 
 const {signInUser,googleSignIn,githubSignIn} = useContext(AuthContext);
-
-
+const navigate = useNavigate();
+const location = useLocation();
+const from = location?.state?.from?.pathname;
+console.log(from)
 const handleLogin = (event) =>{
 event.preventDefault();
 const form = event.target;
@@ -21,6 +23,7 @@ signInUser(email,password)
 .then(result=>{
 const loggedUser = result.user;
 console.log(loggedUser);
+ navigate(from)
  setSuccess('User login Successful')
 })
 .catch(error=>{
@@ -50,8 +53,6 @@ setSuccess('Github login successful')
 setError(error.message)
 })
 }
-
-
 
   return (
 <div className="hero min-h-screen bg-base-200">
