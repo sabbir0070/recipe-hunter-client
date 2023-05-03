@@ -15,8 +15,8 @@ const Navbar = () => {
       })
   }
   return (
-    <div className=''>
-      <div className='px-1  py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl '>
+    <div className='sticky top-0 z-20'>
+      <div className='px-1  py- mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl '>
         <div className='flex justify-between items-center p-10 bg-base-300'>
           <h2 className='text-3xl font-bold inline-flex items-center hover:text-blue-600'>Food & Recipe</h2>
           <ul className='items-center hidden space-x-8 lg:flex text-gray-600 text-lg'>
@@ -30,9 +30,9 @@ const Navbar = () => {
                 </div>
               </div>
 
-                <button onClick={handleLogout} className='bg-indigo-500 text-white font-semiboldrounded px-3 py-1 px-5'>Logout</button> </> :
+                <button onClick={handleLogout} className='bg-indigo-500 text-lg hover:bg-indigo-600 text-white font-semibold rounded-lg px-3 py-1 px-5'>Logout</button> </> :
               <Link to="/login">
-                <button className='bg-indigo-500 text-white  font-semibold rounded px-3 py-1 px-5'>
+                <button className='bg-indigo-500 text-white font-semibold rounded-lg px-3 py-1 px-5'>
                   Login
                 </button>
               </Link>
