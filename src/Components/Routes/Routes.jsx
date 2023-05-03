@@ -8,6 +8,7 @@ import ChefRecipes from "../pages/ChefRecipes/ChefRecipes";
 import Home from "../Home/Home";
 import ChefCard from "../pages/ChefCard/ChefCard";
 import ChefAllData from "../ChefAllData/ChefAllData";
+import ChefRecipesLayout from "../../Layouts/ChefRecipesLayout";
 
 
 
@@ -20,12 +21,10 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        // loader: () => fetch(`https://chef-receipe-hunter-server-sabbir0070.vercel.app/chefdatas`),
       },
       {
         path: '/blog',
         element: <Blog></Blog>,
-          loader: ({params}) => fetch(`https://chef-receipe-hunter-server-sabbir0070.vercel.app/chefdatas/${params.id}`)
       },
       {
         path: '/login',
@@ -36,32 +35,31 @@ const router = createBrowserRouter([
         element: <Register></Register>
       },
       {
-        path: '/chefrecipes/:id',
+        path: '/chefrecipes',
         element: <ChefAllData></ChefAllData>,
 
       },
 
       {
-        path: '/',
+        path: '/chef',
         element: <ChefCard></ChefCard>,
-        // loader: ({params}) => fetch(`https://chef-receipe-hunter-server-sabbir0070.vercel.app/chefdatas/${params.id}`)
       },
-      {
+ 
+    ]
+  },
+  // ChefRecipes Layout Route
+  {
+    path: '/',
+    element: <ChefRecipesLayout></ChefRecipesLayout>,
+    errorElement: <Error></Error>,
+    children: [
+     {
         path: 'chefrecipes/:id',
         element: <ChefRecipes></ChefRecipes>,
         loader: ({params}) => fetch(`https://chef-receipe-hunter-server-sabbir0070.vercel.app/chefdatas/${params.id}`)
       }
     ]
-  },
-  // ChefRecipes Layout Route
-  // {
-  //   path: '/',
-  //   element: <ChefRecipesLayout></ChefRecipesLayout>,
-  //   errorElement: <Error></Error>,
-  //   children: [
-
-  //   ]
-  // }
+  }
 
 ])
 export default router;
