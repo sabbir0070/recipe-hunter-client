@@ -17,8 +17,8 @@ setError(error.message)
   return (
   <div className=''>
   <div className='px-1 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl '>
-      <div className='flex justify-between items-center p-10 bg-gray-300'>
-        <h2 className='text-3xl font-bold inline-flex items-center'>Food & Recipe</h2>
+      <div className='flex justify-between items-center p-10 bg-red-200'>
+        <h2 className='text-3xl font-bold inline-flex items-center hover:text-blue-600'>Food & Recipe</h2>
         <ul className='items-center hidden space-x-8 lg:flex text-gray-600 text-lg'>
           <NavLink to='/' className={({ isActive }) => (isActive ? 'text-blue-500' : 'default')}>Home</NavLink>
           <NavLink to='/blog' className={({ isActive }) => (isActive ? 'text-blue-500' : 'default')}>blog</NavLink>

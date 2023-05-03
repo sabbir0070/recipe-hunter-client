@@ -23,7 +23,7 @@ const router = createBrowserRouter([
         // loader: () => fetch(`https://chef-receipe-hunter-server-sabbir0070.vercel.app/chefdatas`),
       },
       {
-        path: '/blog/:id',
+        path: '/blog',
         element: <Blog></Blog>,
           loader: ({params}) => fetch(`https://chef-receipe-hunter-server-sabbir0070.vercel.app/chefdatas/${params.id}`)
       },
@@ -44,11 +44,12 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <ChefCard></ChefCard>,
-        loader: () => fetch(`https://chef-receipe-hunter-server-sabbir0070.vercel.app/chefdatas`)
+        // loader: ({params}) => fetch(`https://chef-receipe-hunter-server-sabbir0070.vercel.app/chefdatas/${params.id}`)
       },
       {
-        path: '/chefrecipes',
-        element: <ChefRecipes></ChefRecipes>
+        path: 'chefrecipes/:id',
+        element: <ChefRecipes></ChefRecipes>,
+        loader: ({params}) => fetch(`https://chef-receipe-hunter-server-sabbir0070.vercel.app/chefdatas/${params.id}`)
       }
     ]
   },
