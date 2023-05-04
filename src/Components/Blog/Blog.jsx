@@ -1,3 +1,4 @@
+import { FolderArrowDownIcon } from '@heroicons/react/24/solid';
 import React from 'react';
 import Pdf from "react-to-pdf";
 const ref = React.createRef();
@@ -5,12 +6,15 @@ const ref = React.createRef();
 const Blog = () => {
   return (
   
-   <div className="Blog">
+   <div className="Blog text-center py-3 ">
       <Pdf targetRef={ref} filename="code-example.pdf">
-        {({ toPdf }) => <button className='bg-success' onClick={toPdf}>Generate Pdf</button>}
+        {({ toPdf }) => <button className='bg-indigo-700 px-5 py-2 hover:bg-indigo-500 font-bold
+ rounded-lg text-white ' onClick={toPdf}>
+<FolderArrowDownIcon className='w-full h-full '/>
+ Download Pdf</button>} 
       </Pdf>
       <div ref={ref}>
-        <div className='bg-lime-600 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 rounded-lg gap-8 px-10 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl'>
+        <div className='bg-lime-600 grid sm:grid-cols-1 mt-3 md:grid-cols-2 lg:grid-cols-2 rounded-lg gap-8 px-10 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl'>
      <div className='border hover:bg-base-100 p-5 bg-base-300 text-gray-700 text-lg rounded-lg'>
 <h3 className='text-red-600 text-2xl mb-3 hover:text-red-700'>1.Question:Tell us the differences between uncontrolled and controlled components?</h3>
 <p>Answer: In React, controlled components

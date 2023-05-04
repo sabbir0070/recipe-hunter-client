@@ -18,7 +18,7 @@ const Navbar = () => {
     <div className='sticky top-0 z-20'>
       <div className='px-1  py- mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl '>
         <div className='flex justify-between items-center p-10 bg-base-300'>
-          <h2 className='text-3xl font-bold inline-flex items-center hover:text-blue-600'>The Food Network-bd</h2>
+          <h2 className='text-3xl font-bold inline-flex items-center hover:text-blue-600'>Food Network-bd</h2>
           <ul className='items-center hidden space-x-8 lg:flex text-gray-600 text-lg'>
             <NavLink to='/' className={({ isActive }) => (isActive ? 'text-blue-500' : 'text-gray-600 font-semibold')} >Home</NavLink>
             <NavLink to='/blog' className={({ isActive }) => (isActive ? 'text-blue-500' : 'text-gray-600 font-semibold')}>blog</NavLink>
@@ -50,7 +50,7 @@ const Navbar = () => {
                 <div className='p-5 bg-gray-200 mb-10  border rounded shadow-sm'>
                   <div className='flex items-center justify-between mb-4'>
                     <div>
-                      <Link className='text-3xl font-bold inline-flex items-center'>The Food Network-bd</Link>
+                      <Link className='text-3xl font-bold inline-flex items-center'>Food Network-bd</Link>
                     </div>
                     <div>
                       <button
