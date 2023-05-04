@@ -16,7 +16,7 @@ const RecipesDetails = ({ recipe }) => {
 
   return (
     <div>
-      <div className="card w-96 bg-base-200 shadow-xl  xs:w-xl ">
+      <div className="card lg:w-96 md:w-96 bg-base-200 shadow-xl w-full ">
         <figure className="px-10 pt-10">
           <img src={Picture} alt="Shoes" className="w-60 h-40 rounded-xl" />
         </figure>

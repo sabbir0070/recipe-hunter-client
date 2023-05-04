@@ -53,8 +53,8 @@ setError(error.message)
 
 
   return (
-<div className="hero min-h-screen bg-base-200  px-1  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
-  <div className="w-96 flex-col">
+<div className="hero min-h-screen bg-base-200  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
+  <div className=" lg:w-96 md:w-96  sm:w-full flex-col">
     <div className="text-center mb-3">
       <h3 className="text-5xl font-bold">Please Register </h3>
     </div>

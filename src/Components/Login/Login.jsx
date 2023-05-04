@@ -16,14 +16,14 @@ const Login = () => {
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
-// Loading spinner
-if(loading){
-return (
-<div className='w-full h-full items-center text-center  px-20'>
-<progress className="progress  text-center text-green-700"></progress>
-</div>
-)
-}
+    // Loading spinner
+    if (loading) {
+      return (
+        <div className='w-full h-full items-center text-center  px-20'>
+          <progress className="progress  text-center text-green-700"></progress>
+        </div>
+      )
+    }
     setError('');
     setSuccess('')
     if (password.length < 6) {
@@ -47,6 +47,7 @@ return (
       .then(result => {
         const loggedUser = result.user;
         console.log(loggedUser)
+        navigate('/')
         setSuccess('Google login successful')
       })
       .catch(error => {
@@ -58,6 +59,7 @@ return (
       .then(result => {
         const loggedUser = result.user;
         console.log(loggedUser)
+        navigate('/')
         setSuccess('Github login successful')
       })
       .catch(error => {
@@ -66,7 +68,7 @@ return (
   }
   return (
     <div className="hero min-h-screen bg-base-200 px-1 mt-5  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
-      <div className=" w-96 flex-col">
+      <div className=" lg:w-96 md:w-96 sm:w-full xs:w-full flex-col">
         <div className="text-center mb-3">
           <h3 className="text-5xl font-bold">Please Login! </h3>
         </div>

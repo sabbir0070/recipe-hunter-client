@@ -46,7 +46,7 @@ const Navbar = () => {
               <Bars3Icon className="h-8 w-8 text-indigo-600"></Bars3Icon>
             </button>
             {isMenuOpen && (
-              <div className='absolute z-10   top-0 left-0 w-full '>
+              <div className='absolute z-10 sm:w-full  top-0 left-0 w-full '>
                 <div className='p-5 bg-gray-200 mb-10  border rounded shadow-sm'>
                   <div className='flex items-center justify-between mb-4'>
                     <div>

@@ -5,7 +5,7 @@ import Footer from '../Components/Share/Footer/Footer';
 
 const ChefRecipesLayout = () => {
   return (
-    <div>
+    <div className=''>
       <Navbar></Navbar>
       <Outlet></Outlet>
       <Footer></Footer>

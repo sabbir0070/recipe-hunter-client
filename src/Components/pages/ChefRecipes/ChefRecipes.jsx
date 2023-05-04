@@ -22,7 +22,7 @@ const ChefRecipes = () => {
         </div>
       </div>
       {/* Recipes details */}
-      <div className="card mt-20 grid md:grid-cols-2 bg-base-100 shadow-xl  lg:grid-cols-3 sm:gap-y-16  px-10 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
+      <div className="card mt-20 grid md:grid-cols-2 bg-base-100 shadow-xl  lg:grid-cols-3 sm:gap-y-16  lg:px-10 md:px-10 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl">
         {
           data.recipes.map(recipe => <RecipesDetails
             key={recipe._id}
