@@ -7,11 +7,13 @@ const Blog = () => {
   return (
   
    <div className="Blog text-center py-3 ">
-      <Pdf targetRef={ref} filename="code-example.pdf">
+      <Pdf className="w-full h-full" targetRef={ref} filename="code-example.pdf">
         {({ toPdf }) => <button className='bg-indigo-700 px-5 py-2 hover:bg-indigo-500 font-bold
  rounded-lg text-white ' onClick={toPdf}>
-<FolderArrowDownIcon className='w-full h-full '/>
- Download Pdf</button>} 
+ 
+<FolderArrowDownIcon className='w-full h-5 '/>
+ Download Pdf
+ </button>} 
       </Pdf>
       <div ref={ref}>
         <div className=' bg-lime-600 grid sm:grid-cols-1 mt-3 md:grid-cols-2 lg:grid-cols-2 rounded-lg gap-8 lg:px-10 md:px-10 w-full py-5 mx-auto sm:max-w-full xs:w-full md:max-w-full lg:max-w-screen-xl'>
