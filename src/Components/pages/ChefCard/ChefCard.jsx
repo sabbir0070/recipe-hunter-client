@@ -24,7 +24,7 @@ const ChefCard = ({ chef }) => {
                     rounded bg-indigo-500 text-white hover:bg-indigo-700 ">
             View Recipes </button> </Link>
           <p className='text-gray-800 flex items-center text-lg font-semibold'>
-            <HandThumbUpIcon className='w-10  h-10  mr-2 xs:mr-0 text-indigo-700'></HandThumbUpIcon> <span className='text-3xl text-red-700'>{likes}</span>
+            <HandThumbUpIcon className='w-10  h-10  mr-2 lg:ml-8 text-indigo-700'></HandThumbUpIcon> <span className='text-3xl text-red-700'>{likes}</span>
           </p>
         </div>
       </div>
