@@ -8,7 +8,7 @@ const location = useLocation();
 // console.log(location)
 if(loading){
 return (
-<div className='w-full h-full items-center text-center  px-20'>
+<div className='lg:w-40   md:w-60  lg:px-20 md:px-20 h-full items-center text-center'>
 <progress className="progress  text-center text-green-700"></progress>
 </div>
 

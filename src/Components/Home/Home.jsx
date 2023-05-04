@@ -10,7 +10,7 @@ const Home = () => {
 const {loading} = useContext(AuthContext);
 if(loading){
 return (
-<div className='w-full h-full items-center text-center  px-20'>
+<div className='lg:w-50 h-full lg-px-10 md:px-10 items-center text-center mx-auto sm:max-w-xl'>
 <progress className="progress  text-center text-green-700"></progress>
 </div>
 )

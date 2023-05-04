@@ -19,7 +19,7 @@ const Login = () => {
     // Loading spinner
     if (loading) {
       return (
-        <div className='w-full h-full items-center text-center  px-20'>
+        <div className='lg:w-60 h-full md:w-60 items-center text-center  px-20'>
           <progress className="progress  text-center text-green-700"></progress>
         </div>
       )

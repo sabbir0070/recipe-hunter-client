@@ -5,7 +5,7 @@ const Banner = () => {
 const {loading} = useContext(AuthContext);
 if(loading){
 return (
-<div className='w-full h-full items-center text-center  px-20'>
+<div className='lg:4-60 2xl:w-60 md:w-40 h-full items-center text-center px-20'>
 <progress className="progress  text-center text-green-700"></progress>
 </div>
 )
