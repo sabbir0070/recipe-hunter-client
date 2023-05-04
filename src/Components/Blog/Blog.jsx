@@ -1,9 +1,16 @@
 import React from 'react';
-
+import Pdf from "react-to-pdf";
+const ref = React.createRef();
 
 const Blog = () => {
   return (
-    <div className='bg-lime-600 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 rounded-lg gap-8 px-10 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl'>
+  
+   <div className="Blog">
+      <Pdf targetRef={ref} filename="code-example.pdf">
+        {({ toPdf }) => <button className='bg-success' onClick={toPdf}>Generate Pdf</button>}
+      </Pdf>
+      <div ref={ref}>
+        <div className='bg-lime-600 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 rounded-lg gap-8 px-10 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl'>
      <div className='border hover:bg-base-100 p-5 bg-base-300 text-gray-700 text-lg rounded-lg'>
 <h3 className='text-red-600 text-2xl mb-3 hover:text-red-700'>1.Question:Tell us the differences between uncontrolled and controlled components?</h3>
 <p>Answer: In React, controlled components
@@ -60,7 +67,11 @@ They can also help to keep components focused on their
 in more modular and maintainable code.</p>
 </div>
     </div>
+      </div>
+    </div>
+
   );
 };
 
 export default Blog;
+

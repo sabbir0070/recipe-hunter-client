@@ -18,3 +18,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.LazyLoad {
+    opacity: 0;
+    transition: all 3s ease-in-out;
+}
+  
+.is-visible {
+    opacity: 1;
+}
+
+
+ /* "@fortawesome/fontawesome-svg-core": "^6.4.0", */
+    /* "@fortawesome/free-solid-svg-icons": "^6.4.0", */
+    /* "@fortawesome/react-fontawesome": "^0.2.0", */

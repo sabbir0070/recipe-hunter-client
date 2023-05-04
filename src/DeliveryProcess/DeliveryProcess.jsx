@@ -14,7 +14,7 @@ const DeliveryProcess = () => {
       <div className=' text-left  px-8 border border-gray-500 hover:bg-base-300 rounded-lg pt-5 bg-base-100'>
         <p className='text-4xl font-bold text-gray-800 leading-tight '> Your Favourite Food <br />   <span className='text-indigo-500'> delivery</span>  Partner. </p>
         <p className='text-gray-700 text-2xl mt-3'> We are focused on being the best helping hard to the local business <br /> best recipes direct to your door </p>
-<button className=' border border-gray-400 px-8 py-3 mt-3 mb-3 bg-blue-600 font-bold rounded-lg text-white px-3'>Order Now</button>      
+<button className='border border-gray-400 hover:bg-indigo-700 hover:text-yellow-500 px-8 py-3 mt-3 mb-3 bg-blue-600 font-bold rounded-lg text-white px-3'>Order Now</button>      
 </div>
       <div>
       </div>

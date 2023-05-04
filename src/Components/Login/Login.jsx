@@ -5,7 +5,16 @@ import { AuthContext } from '../../Providers/AuthProviders';
 const Login = () => {
 const [error, setError] = useState('');
 const [success, setSuccess] = useState(''); 
-const {signInUser,googleSignIn,githubSignIn} = useContext(AuthContext);
+const {loading,signInUser,googleSignIn,githubSignIn} = useContext(AuthContext);
+// Loading spinner
+if(loading){
+return (
+<div className='w-full h-full items-center text-center  px-20'>
+<progress className="progress  text-center text-green-700"></progress>
+</div>
+)
+}
+
 const navigate = useNavigate();
 const location = useLocation();
 const from = location?.state?.from?.pathname || "/";

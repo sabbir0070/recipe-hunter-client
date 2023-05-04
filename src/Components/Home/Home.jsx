@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
 // import banner from '../../assets/image/banner.jpg'
 import ChefAllData from '../ChefAllData/ChefAllData';
 import Banner from '../Banner/Banner';
 import Places from '../pages/Places/Places';
 import DeliveryProcess from '../../DeliveryProcess/DeliveryProcess';
+import { AuthContext } from '../../Providers/AuthProviders';
 
 const Home = () => {
+const {loading} = useContext(AuthContext);
+if(loading){
+return (
+<div className='w-full h-full items-center text-center  px-20'>
+<progress className="progress  text-center text-green-700"></progress>
+</div>
+)
+}
   return (
     <div>
 
