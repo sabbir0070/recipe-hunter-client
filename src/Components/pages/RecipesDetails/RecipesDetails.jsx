@@ -16,7 +16,7 @@ const RecipesDetails = ({ recipe }) => {
 
   return (
     <div>
-      <div className="card w-96 bg-base-200 shadow-xl">
+      <div className="card w-96 bg-base-200 shadow-xl  xs:w-xl ">
         <figure className="px-10 pt-10">
           <img src={Picture} alt="Shoes" className="w-60 h-40 rounded-xl" />
         </figure>
@@ -43,18 +43,18 @@ const RecipesDetails = ({ recipe }) => {
               </div>
               <p className='ml-10'>
                 <button onClick={handleToasty} disabled={!favourite} className='btn bg-indigo-600'>Favourite</button>
-                <ToastContainer 
-position="top-center"
-autoClose={5000}
-hideProgressBar={false}
-newestOnTop={false}
-closeOnClick
-rtl={false}
-pauseOnFocusLoss
-draggable
-pauseOnHover
-theme="light"
- />
+                <ToastContainer
+                  position="top-center"
+                  autoClose={5000}
+                  hideProgressBar={false}
+                  newestOnTop={false}
+                  closeOnClick
+                  rtl={false}
+                  pauseOnFocusLoss
+                  draggable
+                  pauseOnHover
+                  theme="light"
+                />
               </p>
               <div>
               </div>

@@ -1,12 +1,12 @@
 import React from 'react';
-import { BeakerIcon } from '@heroicons/react/24/solid'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCediSign, faCoffee } from '@fortawesome/free-solid-svg-icons'
-import { Link } from 'react-router-dom';
+// import { BeakerIcon } from '@heroicons/react/24/solid'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faCediSign, faCoffee } from '@fortawesome/free-solid-svg-icons'
+// import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
- <div className='bg-slate-900 text-white mt-10 text-center py-5  px-10 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl '>
+ <div className='bg-slate-900 text-white mt-10 text-center py-5  px-10 py-5 mx-auto  xs:w-xl  sm:max-w-xl md:max-w-full lg:max-w-screen-xl '>
             <h2 className='font-bold text-5xl text-center pt-5 hover:text-base-200'>GOOD FOOD</h2>
             <ul className='flex justify-center mt-5'>
                 <li className='md:px-2 px-1 md:font-bold'>HOME</li>

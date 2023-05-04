@@ -16,7 +16,7 @@ const Navbar = () => {
   }
   return (
     <div className='sticky top-0 z-20'>
-      <div className='px-1  py- mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl '>
+      <div className='px-1  py- mx-auto  xs:w-xl  sm:max-w-xl md:max-w-full lg:max-w-screen-xl '>
         <div className='flex justify-between items-center p-10 bg-base-300'>
           <h2 className='text-3xl font-bold inline-flex items-center hover:text-blue-600'>Food Network-bd</h2>
           <ul className='items-center hidden space-x-8 lg:flex text-gray-600 text-lg'>

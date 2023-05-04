@@ -3,7 +3,7 @@ import delivery from '../../src/assets/image/delivery.jpg'
 
 const DeliveryProcess = () => {
   return (
-    <div className='grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-2 sm:gap-y-16 bg-base-500 justify-between px-10 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl'>
+    <div className='grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-2 sm:gap-y-16 bg-base-500 justify-between px-10 py-5 mx-auto  xs:w-xl  sm:max-w-xl md:max-w-full lg:max-w-screen-xl'>
       <div className='w-100 lg:w-100 md:w-100 relative'>
         <img className=' h-80 w-full bg-cover shadow-xl rounded-lg bg-gray-300' src={delivery} alt="img nai" />
 <div className='absolute bottom-0 mb-8 width-full  text-center'>

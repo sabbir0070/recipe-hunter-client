@@ -14,8 +14,8 @@ const Blog = () => {
  Download Pdf</button>} 
       </Pdf>
       <div ref={ref}>
-        <div className='bg-lime-600 grid sm:grid-cols-1 mt-3 md:grid-cols-2 lg:grid-cols-2 rounded-lg gap-8 px-10 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl'>
-     <div className='border hover:bg-base-100 p-5 bg-base-300 text-gray-700 text-lg rounded-lg'>
+        <div className=' bg-lime-600 grid sm:grid-cols-1 mt-3 md:grid-cols-2 lg:grid-cols-2 rounded-lg gap-8 px-10 py-5 mx-auto sm:max-w-xl xs:w-xl md:max-w-full lg:max-w-screen-xl'>
+     <div className=' border hover:bg-base-100 p-5 bg-base-300 text-gray-700 text-lg rounded-lg'>
 <h3 className='text-red-600 text-2xl mb-3 hover:text-red-700'>1.Question:Tell us the differences between uncontrolled and controlled components?</h3>
 <p>Answer: In React, controlled components
  refer to components that have their state and
