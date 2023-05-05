@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import RecipesDetails from '../RecipesDetails/RecipesDetails';
+import { HandThumbUpIcon } from '@heroicons/react/24/solid';
 const ChefRecipes = () => {
   const data = useLoaderData();
   const { chef_name, specialty, chef_picture, experience, likes, number_of_recipes, description } = data;
@@ -15,9 +16,13 @@ const ChefRecipes = () => {
           <p className="text-gray-600 text-lg font-semibold "> <span className='font-semibold text-lg text-yellow-600'> Specialty:</span> {specialty} </p>
           <p className="text-gray-600 text-lg font-semibold "> <span className='font-semibold text-lg text-blue-600'> Number of recipes:</span> {number_of_recipes} </p>
           <p className="text-gray-600 text-lg font-semibold "><span className='font-semibold text-lg text-yellow-600'> Year of experience:</span>{experience} </p>
-          <p className="text-gray-600 text-lg font-semibold"> <span className='font-semibold text-lg text-blue-600'> Likes:</span> {likes} </p>
+          {/* <p className="text-gray-600 text-lg font-semibold"> <span className='font-semibold text-lg text-blue-600'> Likes:</span> {likes} </p> */}
           <div className="card-actions">
             <Link to="/"><button className="bg-indigo-500 px-5 py-2 text-white text-lg font-semibold rounded-lg hover:bg-indigo-700">Back Home</button></Link>
+            <p className='text-gray-800 flex items-center text-lg font-semibold'>
+              <HandThumbUpIcon className='w-7  h-10  mr-2 ml-5 text-indigo-700'></HandThumbUpIcon>
+              <span className='text-lg text-red-700'>{likes}</span>
+            </p>
           </div>
         </div>
       </div>

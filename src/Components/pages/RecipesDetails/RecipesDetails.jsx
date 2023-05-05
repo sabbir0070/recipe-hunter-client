@@ -4,11 +4,10 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const RecipesDetails = ({ recipe }) => {
   const { Picture, rating, name, total_View, making_details, ingradiants } = recipe;
-
   const [favourite, setFavourite] = useState(true);
 
   const handleToasty = (event) => {
-    toast("Favourite this Items")
+    toast(" Succuessfully added to favourite")
     console.log(444)
     setFavourite(event.target.checked)
   }
@@ -16,7 +15,7 @@ const RecipesDetails = ({ recipe }) => {
 
   return (
     <div>
-      <div className="card lg:w-96 md:w-96 bg-base-200 shadow-xl w-full ">
+      <div className="card lg:w-96 md:w-96 bg-base-200 hover:bg-base-100 shadow-xl w-full ">
         <figure className="px-10 pt-10">
           <img src={Picture} alt="Shoes" className="w-60 h-40 rounded-xl" />
         </figure>
