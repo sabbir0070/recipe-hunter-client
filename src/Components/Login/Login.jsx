@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProviders';
 
+
 const Login = () => {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
@@ -24,8 +25,7 @@ const Login = () => {
         </div>
       )
     }
-    setError('');
-    setSuccess('')
+  
     if (password.length < 6) {
       setError('Please at least 6 number of password')
     }
@@ -34,11 +34,14 @@ const Login = () => {
       .then(result => {
         const loggedUser = result.user;
         console.log(loggedUser);
+        setError('')
+        setSuccess('Login successful')
         navigate(from)
-        setSuccess('User login Successful')
+      
       })
       .catch(error => {
-        //  setError(error.message)
+        setError("Invalid password")
+        setSuccess('')
       })
   }
   // google signIn
@@ -90,13 +93,13 @@ const Login = () => {
               </label>
             </div>
             <div className="form-control mt-6">
-              <button className="btn btn-primary">Login</button>
-              <button onClick={handleGoogleSignIn} className="btn mt-3 btn-primary">Google Sign In</button>
-              <button onClick={handleGithubSignIn} className="btn mt-3 btn-primary">Github Sign In</button>
+              <button  className="btn btn-primary">Login</button>
+              <button  onClick={handleGoogleSignIn} className="btn mt-3 btn-primary">Google Sign In</button>
+              <button  onClick={handleGithubSignIn} className="btn mt-3 btn-primary">Github Sign In</button>
             </div>
             <p className='text-sky-500 text-center text-lg'><small><Link to='/register'>New Auth User? Please Register</Link></small></p>
-            <p className='text-red-500 text-center'>{error}</p>
-            <p className='text-green-500 text-center'>{success}</p>
+            <p className='text-red-500 font-semibold text-center'>{error}</p>
+            <p className='text-green-500 text-center font-semibold'>{success}</p>
           </form>
         </div>
       </div>

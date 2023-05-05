@@ -2,6 +2,9 @@
 import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { FaEye, FaRegStar, FaStar, } from 'react-icons/fa';
+import Rating from 'react-rating';
+
 const RecipesDetails = ({ recipe }) => {
   const { Picture, rating, name, total_View, making_details, ingradiants } = recipe;
   const [favourite, setFavourite] = useState(true);
@@ -35,10 +38,18 @@ const RecipesDetails = ({ recipe }) => {
               </div>
             </div>
             <hr className='bg-lime-500 h-2 w-full border' />
+
+            <p className='mt-2 text-lg font-semibold items-center text-gray-600 text-yellow-800'> Rating : <Rating
+              placeholderRating={rating}
+              readonly
+              emptySymbol={<FaRegStar className='w-10 h-6 mt-1 '></FaRegStar>}
+              placeholderSymbol={<FaStar className=' w-10 h-6 text-orange-400 mt-1'></FaStar>}
+              fullSymbol={<FaStar></FaStar>}
+            />
+            </p>
             <div className='pt-3 flex justify-between items-center gap-10'>
               <div>
-                <p className='text-lg font-semibold text-gray-600 text-yellow-800'>rating: {rating}</p>
-                <p className='text-gray-600 text-lg font-semibold  text-yellow-800'>views:{total_View} </p>
+                <p className='text-gray-600 text-lg font-semibold  text-yellow-800'>Views : <span className='text-green-500'>{total_View}</span>  </p>
               </div>
               <p className='ml-10'>
                 <button onClick={handleToasty} disabled={!favourite} className='btn bg-indigo-600'>Favourite</button>
